@@ -28,7 +28,7 @@ const CommentForm: React.FC<PropTypes> = ({ submitHandler }) => {
 
     return (
             <Form onSubmit={onSubmitHandler}>
-                <TextField size='small' label="Type Comment" variant="outlined" required {...comment} />
+                <TextField size='small' label="Type Comment" variant="outlined" required value={comment.value} onChange={comment.onChange} />
                 <Button
                     type='submit'
                     color='primary'

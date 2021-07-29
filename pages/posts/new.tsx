@@ -45,8 +45,8 @@ const CreatePost = () => {
         <MainLayout>
             <h2>Create Post:</h2>
             <Form onSubmit={submitHandler}>
-                <TextField size='small' label="Title" variant="outlined" required {...title} />
-                <TextField size='small' label="Body" variant="outlined" required {...body} />
+                <TextField size='small' label="Title" variant="outlined" required value={title.value} onChange={title.onChange} />
+                <TextField size='small' label="Body" variant="outlined" required value={body.value} onChange={body.onChange} />
                 <Button
                     type='submit'
                     color='primary'
