@@ -18,6 +18,7 @@ const Card = styled.div`
     position: relative;
     overflow: hidden;
     max-width: 500px;
+    max-width: 100%;
     min-width: 200px;
     max-height: 300px;
     height: 100%;
@@ -34,6 +35,7 @@ const Card = styled.div`
     }
     p {
         padding: 0 5px;
+        word-break: break-word;
     }
 `
 
