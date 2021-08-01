@@ -3,7 +3,8 @@ import { IPost, PostAction, PostActionTypes } from "../../types";
 const initialState = {
     posts: [] as IPost[],
     isLoading: false,
-    postDetails: {} as IPost
+    postDetails: {} as IPost,
+    error: null as any
 }
 
 export const postsReducer = (state = initialState, action: PostAction): typeof initialState => {
@@ -17,13 +18,8 @@ export const postsReducer = (state = initialState, action: PostAction): typeof i
         case PostActionTypes.ADD_COMMENT:
             const comments = state.postDetails.comments || []
             comments.unshift(action.payload)
-            return {
-                ...state,
-                postDetails: {
-                    ...state.postDetails,
-                    comments
-                }
-            }
+        case PostActionTypes.SET_ERROR:
+            return {...state, error: action.payload}
         default:
             return state
     }

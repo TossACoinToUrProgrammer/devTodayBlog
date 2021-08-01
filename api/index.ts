@@ -10,7 +10,7 @@ export const fetchPosts = async () => {
         const data = await response.data
         return data
     } catch (error) {
-        return { error }
+        return { error: error.response }
     }
 }
 
@@ -20,7 +20,7 @@ export const fetchPost = async (id) => {
         const data = await response.data
         return data
     } catch (error) {
-        return { error }
+        return { error: error.response }
     }
 }
 
@@ -30,7 +30,7 @@ export const createPost = async (post) => {
         const data = await response.data
         return data
     } catch (error) {
-        return { error }
+        return { error: error.response }
     }
 }
 
@@ -40,6 +40,6 @@ export const addComment = async (text, id) => {
         const data = await response.data
         return data
     } catch (error) {
-        return { error }
+        return { error: error.response }
     }
 }

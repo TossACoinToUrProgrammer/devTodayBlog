@@ -15,7 +15,8 @@ export enum PostActionTypes {
     SET_POSTS = "SET_POSTS",
     TOGGLE_LOADING = "TOGGLE_LOADING",
     ADD_COMMENT = "ADD_COMMENT",
-    SET_POST_DETAILS = "SET_POST_DETAILS"
+    SET_POST_DETAILS = "SET_POST_DETAILS",
+    SET_ERROR = "SET_ERROR"
 }
 
 interface SetPostsActionType {
@@ -38,4 +39,9 @@ interface AddCommentActionType {
     payload: IComment
 }
 
-export type PostAction = SetPostsActionType | ToggleLoading | SetPostDetailsActionType | AddCommentActionType
+interface SetErrorActionType {
+    type: PostActionTypes.SET_ERROR
+    payload: any
+}
+
+export type PostAction = SetPostsActionType | ToggleLoading | SetPostDetailsActionType | AddCommentActionType | SetErrorActionType

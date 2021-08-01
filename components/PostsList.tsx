@@ -6,8 +6,6 @@ const List = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    -webkit-justify-content: space-around;
-    justify-content: unset;
 `
 
 const PostsList = ({ posts }) => {
