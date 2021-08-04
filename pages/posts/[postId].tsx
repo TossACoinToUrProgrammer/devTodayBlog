@@ -38,7 +38,7 @@ const Post = ({ id }) => {
     const post = useTypesSelector(state => state.posts.postDetails)
     const [modal, setModal] = useState(false)
     const { addCommentQuery } = useActions()
-
+    
     const addComment = (text) => {
         addCommentQuery(text, id)
         setModal(true)
